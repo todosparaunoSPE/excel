@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu May 30 14:33:24 2024
+
 @author: jperezr
 """
 
@@ -8,7 +9,7 @@ import streamlit as st
 import pandas as pd
 
 def main():
-    st.title("Prontuario")
+    st.title("Para realizar una búsqueda en un archivo xlsx")
 
     # Cargar el archivo Excel
     uploaded_file = st.file_uploader("Elige un archivo Excel", type=["xlsx"])
@@ -26,8 +27,12 @@ def main():
             # Filtrar el DataFrame
             filtered_df = df[df[search_column].astype(str).str.contains(search_term, case=False, na=False)]
             st.write("Resultados de la búsqueda:")
-            st.dataframe(filtered_df.style.highlight_max(axis=0))  # Aplica estilo para resaltar el valor máximo en cada columna
-            st.markdown("<style>table.dataframe { border-collapse: collapse; }</style>", unsafe_allow_html=True)  # Agrega estilo de borde a la tabla
-
+            ##st.write(filtered_df)
+            st.dataframe(filtered_df, width=1500, height=400)  # Ajusta el ancho y la altura según tus necesidades
+            
+            
+            
+            
+            
 if __name__ == "__main__":
     main()
