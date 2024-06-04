@@ -10,6 +10,7 @@ import pandas as pd
 
 def main():
     st.title("Para realizar una búsqueda en un archivo xlsx")
+    st.header("Creado por: jahoperi")
 
     # Cargar el archivo Excel
     uploaded_file = st.file_uploader("Elige un archivo Excel", type=["xlsx"])
