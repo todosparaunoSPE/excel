@@ -9,7 +9,9 @@ import streamlit as st
 import pandas as pd
 
 def main():
-    st.title("Prontuario")
+    st.title("Archivos xlsx")
+
+    st.header("Filtra la columna para realizar una búsqueda")
 
     # Cargar el archivo Excel
     uploaded_file = st.file_uploader("Elige un archivo Excel", type=["xlsx"])
