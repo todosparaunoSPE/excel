@@ -12,7 +12,7 @@ def main():
     st.title("Archivos xlsx")
 
     st.header("Filtra la columna para realizar una búsqueda")
-    st.subheader("Creado por: jahoperi)
+    st.subheader("Creado por: jahoperi")
 
     # Cargar el archivo Excel
     uploaded_file = st.file_uploader("Elige un archivo Excel", type=["xlsx"])
